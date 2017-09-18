@@ -1,0 +1,3 @@
+include ':app',':httplib',':commonlib'
+include ':dialogplus'
+project(':dialogplus').projectDir = new File(rootDir, 'dialogplus/dialogplus')

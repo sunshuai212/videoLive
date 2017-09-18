@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/app_layout_top"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_title_height"
+    android:background="@color/app_top_color" >
+    <LinearLayout
+        android:id="@+id/title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingLeft="@dimen/title_bar_margin_left_right"
+        android:paddingRight="@dimen/title_bar_margin_left_right"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/back_btn_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="center_vertical|left"
+            android:minWidth="55dp"
+            android:visibility="gone"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:minWidth="55dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/arrow_back"
+            android:drawablePadding="2dip"
+            android:visibility="invisible"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingLeft="@dimen/title_bar_margin_left_right"
+        android:paddingRight="@dimen/title_bar_margin_left_right"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/action_refresh"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:contentDescription="@null"/>
+
+        <Button
+            android:id="@+id/right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:minWidth="55dp"
+            android:visibility="invisible"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/title_right"
+        android:layout_toRightOf="@id/title_left"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView android:id="@+id/sub_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@id/sub_title_txt"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
